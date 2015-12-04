@@ -1,0 +1,7 @@
+{
+  "name": "thaitran",  
+  "description": "ThaiTran's portfolio",  
+  "repository": "https://github.com/thaiwhere/thaitran.git",  
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
