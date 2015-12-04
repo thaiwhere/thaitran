@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to the portfolio of Thai Tran</title>
+  <link href="/stylesheets/thaitran.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/js/thaitran.js" type="text/javascript"></script>  
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="oWoNvyZQgHjfssvrVFvwu2n63xiBbXB7j+/7po3JS5Q=" name="csrf-token" />
+  <link href='http://fonts.googleapis.com/css?family=Jura:300,500' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+  <header id="top_bar">
+		<ul class="nav clearfix">
+			<li class=""><a href="/">Home</a></li>
+			<li class=""><a href="/about">About</a></li>
+			<li class=""><a href="/projects">Portfolio</a></li>
+			<li class="active"><a href="/contact">Contact</a></li>			
+		</ul>
+	</header>
+
+  <div class="wrapper inner_page">
+	<section id="contact">
+		<div class="content_header clearfix">
+			<h3>Drop Me a Line</h3>
+			<p class="intro">Fill out this form and I'll get in touch shortly.</p>
+		</div><!--content-header-->
+	
+    <form accept-charset="UTF-8" action="/messages" class="new_message" id="new_message" method="post">
+		<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+			<input name="authenticity_token" type="hidden" value="oWoNvyZQgHjfssvrVFvwu2n63xiBbXB7j+/7po3JS5Q=" />
+    	</div>
+
+      <div class="field clearfix">
+        <label for="message_name">Name</label>
+        <input id="message_name" name="message[name]" size="30" type="text" />
+      </div>
+      <div class="field clearfix">
+        <label for="message_email">Email</label>
+        <input id="message_email" name="message[email]" size="30" type="text" />
+      </div>      
+      <div class="field clearfix">
+        <label for="message_subject">Subject</label>
+        <input id="message_subject" name="message[subject]" size="30" type="text" />
+      </div>
+      <div class="field clearfix">
+        <label for="message_message">Message</label>
+        <textarea cols="40" id="message_message" name="message[message]" rows="20"></textarea>
+      </div>
+      <div class="actions clearfix">
+        <input name="commit" type="submit" value="Send" />
+      </div>
+</form>    
+    <div id="thanks" style="display:none">Thanks for your message. <br />I'll get in touch shortly.</div>
+		
+		<div class="social">
+			<h3>Elsewhere</h3>
+			<ul>
+				<li>
+	<script src="https://www.odesk.com/widgets/providers/v1/link/~~54079fc29e37ceeb.js"></script>
+</li>
+<li>
+	<a href="http://github.com/thaiwhere" target="_blank">Github</a>
+</li>
+<li>
+	<a href="https://twitter.com/thaiwhere" target="_blank">Twitter</a>
+</li>				
+			</ul>
+		</div><!--social-->
+	
+	
+	</section>
+	
+	
+</div><!--wrapper-->
+
+
+	<footer id="bottom_bar">
+     <div class="footer_container">
+       <p>Copyright 2015. All Rights Reserved.Built using <span>NodeJs</span>.
+         Check out the code on <a href="https://github.com/thaiwhere">Github</a></p>
+     </div><!--footer_container-->
+	</footer>
+</body>
+
+<script>
+/*
+	var nodemailer = require('nodemailer');
+	var express = require('express');	
+	var bodyParser = require('body-parser');
+	var app = express();
+
+	var router = express.Router();
+	app.use('/messages', router);
+	router.post('/', postmessage); // handle the route at yourdomain.com/sayHello
+
+	function postmessage(req, res) {
+    // Not the movie transporter!
+    var transporter = nodemailer.createTransport({
+			service: 'smtp.mail.yahoo.com',
+			auth: {
+				user: 'thaiwhere@yahoo.com', // Your email id
+				pass: '@1234aa' // Your password
+			}
+		});    
+	}
+
+	app.set('port', (process.env.PORT || 5000));
+
+	app.use(express.static(__dirname + '/public'));
+
+	var mailOptions = {
+		from: req.body.message_email, // sender address
+		to: 'thaiwhere@gmail.com', // list of receivers
+		subject: req.body.message_subject, // Subject line
+		text: req.body.message_message //, // plaintext body
+		// html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
+		if(error){
+			console.log(error);
+			res.json({yo: 'error'});
+		}else{
+			console.log('Message sent: ' + info.response);
+			res.json({yo: info.response});
+		};
+	});
+
+	// views is directory for all template files
+	
+	
+	app.set('views', __dirname + '/views');
+	app.set('view engine', 'ejs');
+
+	app.get('/', function(request, response) {
+	  response.render('pages/index')
+	});
+
+	app.post('/messages', function(req, res) {
+	  res.send('You sent the name "' + req.body.message_message + '".');	  
+	});
+	
+	
+	app.listen(app.get('port'), function() {
+	  console.log('Node app is running on port', app.get('port'));
+	});
+*/
+</script>
+</html>
